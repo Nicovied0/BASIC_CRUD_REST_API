@@ -1,6 +1,6 @@
 import { Router } from "express";
 import _ from "underscore";
-import movies from "./sample.json" assert { type: "json" };
+import movies from "../sample.json" assert { type: "json" };
 
 const router = new Router();
 
