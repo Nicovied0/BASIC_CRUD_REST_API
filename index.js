@@ -1,9 +1,9 @@
 import express from "express";
 import morgan from "morgan";
 
-import indexRoutes from "./src/routes/index.js";
-import moviesRoutes from "./src/routes/movies.js";
-import usersRoutes from "./src/routes/users.js";
+import indexRoutes from "./src/index.js";
+import moviesRoutes from "./src/movies.js";
+import usersRoutes from "./src/users.js";
 
 const app = express();
 
