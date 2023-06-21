@@ -1,11 +1,15 @@
-import { Router } from "express";
+const { Router } = require("express");
+const axios = require("axios");
 
-const router = new Router();
+const router = Router();
 
 router.get("/", async (req, res) => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await response.json();
-  res.json(data);
+  try {
+    const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: "There was an error." });
+  }
 });
 
-export default router;
+module.exports = router;

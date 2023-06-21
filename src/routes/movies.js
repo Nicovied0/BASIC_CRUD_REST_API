@@ -1,8 +1,8 @@
-import { Router } from "express";
-import _ from "underscore";
-import movies from "../sample.json" assert { type: "json" };
+const { Router } = require("express");
+const _ = require("underscore");
+const movies = require("../sample.json");
 
-const router = new Router();
+const router = Router();
 
 router.get("/", (req, res) => {
   res.json(movies);
@@ -51,4 +51,4 @@ router.delete("/:id", (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;

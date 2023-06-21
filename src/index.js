@@ -1,9 +1,9 @@
-import express from "express";
-import morgan from "morgan";
+const express = require("express");
+const morgan = require("morgan");
+const indexRoutes = require("./routes/index.js");
+const moviesRoutes = require("./routes/movies.js");
+const usersRoutes = require("./routes/users.js");
 
-import indexRoutes from "./routes/index.js";
-import moviesRoutes from "./routes/movies.js";
-import usersRoutes from "./routes/users.js";
 
 const app = express();
 
