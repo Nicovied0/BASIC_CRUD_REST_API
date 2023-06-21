@@ -8,7 +8,7 @@ import usersRoutes from "./routes/users.js";
 const app = express();
 
 // settings
-app.set("port", process.env.PORT || 4000);
+app.set("port",  5000);
 
 // middlewares
 app.use(morgan("dev"));
