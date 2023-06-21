@@ -1,14 +1,14 @@
 import express from "express";
 import morgan from "morgan";
 
-import indexRoutes from "./routes/index.js";
-import moviesRoutes from "./routes/movies.js";
-import usersRoutes from "./routes/users.js";
+import indexRoutes from "./src/routes/index.js";
+import moviesRoutes from "./src/routes/movies.js";
+import usersRoutes from "./src/routes/users.js";
 
 const app = express();
 
 // settings
-app.set("port",  5000);
+app.set("port", 5000);
 
 // middlewares
 app.use(morgan("dev"));
